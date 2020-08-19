@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+//
 export default (category) => {
   switch (category) {
     case "PLAYSTATION5":

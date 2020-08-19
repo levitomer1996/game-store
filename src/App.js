@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+//Context
+import { ProductProvider } from "./Contex/ProductContext";
+import { CartProvider } from "./Contex/CartContext";
+import { AuthProvider } from "./Contex/AuthContext";
 
-function App() {
+import AuthContext from "./Contex/AuthContext";
+//Components
+import Header from "./Components/Header/Header";
+import MobileHeader from "./Components/Header/MobileHeader";
+import Main from "./Main/Main";
+import useLogin from "./hooks/useLogin";
+
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AuthProvider>
+        <ProductProvider>
+          <CartProvider>
+            <Router>
+              <Header />
+              <MobileHeader />
+              <Main />
+            </Router>
+          </CartProvider>
+        </ProductProvider>
+      </AuthProvider>
     </div>
   );
-}
+};
 
 export default App;

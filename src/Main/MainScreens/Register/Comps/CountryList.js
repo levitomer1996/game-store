@@ -1,0 +1,16 @@
+export const countryList = [
+  { title: "Israel", year: 1994 },
+  { title: "United states", year: 1972 },
+  { title: "Germany", year: 1974 },
+  { title: "France", year: 2008 },
+  { title: "United Kingdom", year: 1957 },
+  { title: "Jordan", year: 1993 },
+  { title: "Italy", year: 1994 },
+  { title: "Switzerland", year: 2003 },
+  { title: "Mexico", year: 1966 },
+  { title: "Holland", year: 1999 },
+  { title: "Hungary", year: 2001 },
+  { title: "Czech repulic", year: 1980 },
+  { title: "Irelane", year: 1994 },
+  { title: "ScottLand", year: 2010 },
+];
